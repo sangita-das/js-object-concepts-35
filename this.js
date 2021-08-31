@@ -1,0 +1,24 @@
+// console.log(this);
+const kibria = {
+  id: 101,
+  money: 5000,
+  name: 'RJ Kibria',
+  treatDeyArrow: () => {
+    console.log(this)
+  },
+
+  treatDayInside: function () {
+    const myArrow = () => console.log(this);
+    myArrow();
+  },
+
+  treatDey: function (expense) {
+    this.money = this.money - expense;
+    console.log('here5555', this);
+    return this.money;
+  }
+}
+
+function add() {
+  console.log(this)
+}
